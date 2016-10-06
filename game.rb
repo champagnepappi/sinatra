@@ -25,4 +25,13 @@ get '/throw/:type' do
 
   #select a random throw for the computer
   computer_throw = @throws.sample
+
+  #compare the player and computer throws to determine the winner
+  if player_throw == computer_throw
+    "You tied with the computer, Try again homie!"
+  elsif computer_throw == @defeat[player_throw]
+    "Yyaiii, Nicely done; #{player_throw} beats #{computer_throw}!"
+  else
+    "Ouch; #{computer_throw} beats #{player_throw}. Better luck next time"
+  end
 end
