@@ -18,8 +18,11 @@ get '/throw/:type' do
   #in the case of a player providing a throw that is not valid,
   #we halt with a status code of 403 (Forbidden) and let them
   #know they need to make valid throw to play
-  
+
   if !@throws.include?(player_throw)
     halt 403, "You must throw one of the following: #{throws}"
   end
+
+  #select a random throw for the computer
+  computer_throw = @throws.sample
 end
