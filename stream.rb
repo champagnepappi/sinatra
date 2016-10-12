@@ -4,6 +4,8 @@ before do
   content_type :txt
 end
 
+connections = []
+
 get '/consume' do
   stream(:keep_open) do |out|
     #store connection for later on
