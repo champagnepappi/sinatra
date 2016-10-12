@@ -13,3 +13,7 @@ get '/delete' do
   response.delete_cookie "foo"
   "Cookie has been deleted"
 end
+
+get '/cookies' do
+  request.cookies
+end
