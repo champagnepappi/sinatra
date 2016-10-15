@@ -8,6 +8,7 @@ module Sinatra
       when :index then '/index'
       else "/page/#{name}"
     end
+    end
   end
 
   helpers LinkHelper
