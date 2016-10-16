@@ -16,3 +16,6 @@ module MySinatra
     end
   end
 end
+
+require 'thin'
+Thin::Server.start MySinatra::Application, 4567
