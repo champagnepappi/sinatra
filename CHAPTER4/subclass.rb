@@ -4,4 +4,6 @@ class MyApp < Sinatra::Base
   get '/' do
     "Hello form the other side"
   end
+
+  run!
 end
