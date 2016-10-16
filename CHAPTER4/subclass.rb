@@ -5,5 +5,7 @@ class MyApp < Sinatra::Base
     "Hello form the other side"
   end
 
-  run!
+  #$0 is the executed file
+  #_FILE_ is current file
+  run! if _FILE_ == $0
 end
