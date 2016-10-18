@@ -7,6 +7,6 @@ end
 class Bar < Sinatra::Base
  get('/bar') {'bar'}
 
- use Foo
- run!
 end
+
+run Rack::Cascade, [Foo, Bar]
